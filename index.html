@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>F1 Championship Simulator & Calculator - Live Standings</title>
+    <meta name="description" content="The ultimate free tool to simulate the 2025 F1 championship. See all permutations, calculate driver standings, and find out who can win the title.">
+    <link rel="canonical" href="https://khen0815.github.io/f1-simulator/" />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Championship Simulator</h1>
+        <p>See who can win the title by simulating the rest of the season.</p>
+        <a href="https://www.youtube.com/channel/UCEUnclzXCNX0WJ05D2AoiVg/" target="_blank" class="youtube-link">
+            My YouTube Channel
+        </a>
+    </header>
+
+    <main class="container">
+        <div class="card" id="simulator-card">
+            <h2>Season Simulator</h2>
+            <div class="status-grid">
+                <div class="status-box">
+                    <span class="label">Total Races</span>
+                    <span id="total-races" class="value">0</span>
+                </div>
+                <div class="status-box">
+                    <span class="label">Races Completed</span>
+                    <span id="completed-races" class="value">0</span>
+                </div>
+                <div class="status-box">
+                    <span class="label">Races Remaining</span>
+                    <span id="remaining-races" class="value">0</span>
+                </div>
+                <div class="status-box">
+                    <span class="label">Max Points Left</span>
+                    <span id="max-points-left" class="value">0</span>
+                </div>
+            </div>
+            
+            <h3>Log a Remaining Event:</h3>
+            <p>Simulate the next race to see how the standings change.</p>
+            <div class="button-group">
+                <button id="show-sprint-modal-btn" class="button-secondary">Log Sprint</button>
+                <button id="show-race-modal-btn" class="button-primary">Log Grand Prix</button>
+            </div>
+            
+            <div class="support-card">
+                <h3>Support This Project</h3>
+                <p>If you find this tool useful, please consider supporting its development!</p>
+                
+                <a href="https://buymeacoffee.com/khen15" target="_blank" class="bmc-button">
+                    Buy Me a Coffee
+                </a>
+            </div>
+            </div>
+
+        <div class="card" id="standings-card">
+            <div class="standings-header">
+                <h2>Championship Standings</h2>
+            </div>
+            <table id="standings-table">
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Driver</th>
+                        <th>Points</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody id="standings-body">
+                    </tbody>
+            </table>
+            <button id="reset-btn" class="button-danger">Reset to Start of Season</button>
+
+            <div class="about-card">
+                <h3>About This Simulator</h3>
+                <p>This tool is pre-loaded with the current 2025 F1 driver standings. You can use it to simulate the results for all remaining Grands Prix and Sprint races to see how the final standings will change.</p>
+                <h4>How it Works:</h4>
+                <ul>
+                    <li>The "Status" column automatically calculates if a driver has <strong>Clinched</strong> the title or been <strong>Eliminated</strong> from contention.</li>
+                    <li>The "Max Points Left" includes all points from remaining Grands Prix (26 per race) and Sprints (8 per sprint).</li>
+                    <li>Click "Reset to Start of Season" to clear your simulations and return to the current, real-world standings.</li>
+                </ul>
+            </div>
+            </div>
+    </main>
+
+    <div id="race-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h2 id="modal-title">Log Race Results</h2>
+            <div class="form-group">
+                <label for="race-name-input">Event Name (e.g., "🇦🇪 Abu Dhabi")</label>
+                <input type="text" id="race-name-input" placeholder="Enter event name (optional)">
+            </div>
+            
+            <h3>Enter Positions:</h3>
+            <div id="race-form-drivers">
+                </div>
+            
+            <div class="modal-buttons">
+                <button id="submit-race-btn" class="button-primary">Submit Results</button>
+                <button id="cancel-race-btn" class="button-secondary">Cancel</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

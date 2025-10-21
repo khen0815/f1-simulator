@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://khen0815.github.io/f1-simulator/sitemap.xml
