@@ -1,3 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://your-github-username.github.io/your-repository-name/sitemap.xml
+
+Sitemap: https://khen0815.github.io/f1-simulator/sitemap.xml
