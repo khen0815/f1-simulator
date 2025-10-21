@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Championship Simulator & Calculator</title>
-    <meta name="description" content="The ultimate tool to simulate remaining races and calculate championship possibilities for your favorite motorsport.">
     
+    <title>F1 Championship Simulator & Calculator - Live Standings</title>
+    <meta name="description" content="The ultimate free tool to simulate the 2025 F1 championship. See all permutations, calculate driver standings, and find out who can win the title.">
+    <link rel="canonical" href="https://khen0815.github.io/f1-simulator/" />
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
@@ -48,11 +49,15 @@
                 <button id="show-race-modal-btn" class="button-primary">Log Grand Prix</button>
             </div>
             
-             <div class="ad-placeholder">
-                <p>Your Ad Here</p>
-                <span>This is where you will paste your Google AdSense code.</span>
+            <div class="support-card">
+                <h3>Support This Project</h3>
+                <p>If you find this tool useful, please consider supporting its development!</p>
+                
+                <a href="https://buymeacoffee.com/khen15" target="_blank" class="bmc-button">
+                    Buy Me a Coffee
+                </a>
             </div>
-        </div>
+            </div>
 
         <div class="card" id="standings-card">
             <div class="standings-header">
@@ -71,7 +76,18 @@
                     </tbody>
             </table>
             <button id="reset-btn" class="button-danger">Reset to Start of Season</button>
-        </div>
+
+            <div class="about-card">
+                <h3>About This Simulator</h3>
+                <p>This tool is pre-loaded with the current 2025 F1 driver standings. You can use it to simulate the results for all remaining Grands Prix and Sprint races to see how the final standings will change.</p>
+                <h4>How it Works:</h4>
+                <ul>
+                    <li>The "Status" column automatically calculates if a driver has <strong>Clinched</strong> the title or been <strong>Eliminated</strong> from contention.</li>
+                    <li>The "Max Points Left" includes all points from remaining Grands Prix (26 per race) and Sprints (8 per sprint).</li>
+                    <li>Click "Reset to Start of Season" to clear your simulations and return to the current, real-world standings.</li>
+                </ul>
+            </div>
+            </div>
     </main>
 
     <div id="race-modal" class="modal-overlay">
